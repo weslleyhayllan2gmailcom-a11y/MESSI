@@ -17,6 +17,65 @@ body {
     padding: 0 20px;
 }
 
+/* Animações de Página */
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#app {
+    min-height: 60vh;
+    animation: pageIn 0.5s ease-out forwards;
+}
+
 /* Navbar */
 .navbar {
     background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
@@ -39,10 +98,12 @@ body {
     font-weight: bold;
     color: white;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .logo:hover {
     opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -92,6 +153,13 @@ body {
     animation: slideUp 0.8s ease-out 0.2s both;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .cta-button {
     background-color: #fbbf24;
     color: #1e3a8a;
@@ -111,8 +179,14 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-#app {
-    min-height: 60vh;
+.cta-button.secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Sections */
@@ -131,6 +205,37 @@ body {
     text-align: center;
     border-bottom: 3px solid #fbbf24;
     padding-bottom: 1rem;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Search Box */
+.search-box {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+    transform: scale(1.02);
 }
 
 /* Content Grid */
@@ -184,6 +289,7 @@ body {
     border-color: #2563eb;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
     background: #f0f9ff;
+    transform: translateY(-3px);
 }
 
 .right-card h3, .duty-card h3 {
@@ -211,6 +317,7 @@ body {
 
 .duty-card:hover {
     border-color: #d97706;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 /* Accordion */
@@ -240,6 +347,7 @@ body {
 
 .accordion-button:hover {
     background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    transform: translateX(5px);
 }
 
 .accordion-button.active {
@@ -257,6 +365,22 @@ body {
 .accordion-content.show {
     display: block;
     animation: slideDown 0.3s ease-in-out;
+}
+
+.accordion-content h4 {
+    color: #1e3a8a;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.accordion-content h4:first-child {
+    margin-top: 0;
+}
+
+.accordion-content ul {
+    margin: 1rem 0;
+    line-height: 2;
 }
 
 /* Info Section */
@@ -287,6 +411,12 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .info-box h4 {
@@ -364,38 +494,6 @@ body {
     opacity: 0.9;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -426,5 +524,13 @@ body {
 
     .content-grid, .rights-grid, .duties-grid, .info-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-button {
+        width: 100%;
     }
 }
