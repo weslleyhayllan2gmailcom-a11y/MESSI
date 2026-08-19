@@ -17,27 +17,27 @@ const pages = {
         <section class="container section">
             <h2>📚 História da CLT</h2>
             <div class="content-grid">
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0s forwards; opacity: 0;">
                     <h3>🌍 Origem</h3>
                     <p>A CLT foi promulgada em 1º de maio de 1943 pelo presidente Getúlio Vargas. Foi consolidação de leis trabalhistas anteriores e representou um marco importante na proteção dos direitos dos trabalhadores no Brasil. Este foi um passo revolucionário para a época!</p>
                 </div>
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0.1s forwards; opacity: 0;">
                     <h3>🎯 Objetivo</h3>
                     <p>Reunir e organizar todas as leis referentes ao trabalho em um único documento, garantindo proteção aos trabalhadores e estabelecendo diretrizes para as relações entre empregadores e empregados. A CLT unificou mais de 100 leis esparsas.</p>
                 </div>
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0.2s forwards; opacity: 0;">
                     <h3>⭐ Importância</h3>
                     <p>A CLT é a base da legislação trabalhista brasileira, protegendo os direitos fundamentais dos trabalhadores e estabelecendo as obrigações dos empregadores. Ela continua sendo atualizada para acompanhar a modernidade.</p>
                 </div>
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0.3s forwards; opacity: 0;">
                     <h3>📅 Evolução</h3>
                     <p>Desde 1943, a CLT sofreu diversas modificações. A mais recente e importante foi a Lei da Reforma Trabalhista (Lei 13.467/2017), que modernizou vários aspectos das relações de trabalho.</p>
                 </div>
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0.4s forwards; opacity: 0;">
                     <h3>🇧🇷 Brasil e CLT</h3>
                     <p>A CLT é específica para o Brasil. Outros países têm suas próprias legislações trabalhistas. O Brasil é reconhecido internacionalmente por ter uma das legislações trabalhistas mais protetoras.</p>
                 </div>
-                <div class="card">
+                <div class="card" style="animation: slideDown 0.8s ease-out 0.5s forwards; opacity: 0;">
                     <h3>🔄 Atualidade</h3>
                     <p>A CLT continua sendo o documento mais importante para trabalhadores. Com o surgimento de novas formas de trabalho (home office, freelance), a lei continua se adaptando para proteger todos.</p>
                 </div>
@@ -49,54 +49,54 @@ const pages = {
         <section class="container section">
             <h2>✅ Direitos do Trabalhador</h2>
             <div class="search-box">
-                <input type="text" id="searchDireitos" placeholder="🔍 Buscar direito..." onkeyup="filterCards('direitos')">
+                <input type="text" id="searchDireitos" placeholder="🔍 Buscar direito..." onkeyup="filterCards('direitos')" style="animation: slideUp 0.6s ease-out 0.3s forwards; opacity: 0;">
             </div>
             <div class="rights-grid">
-                <div class="right-card" data-search="salário mínimo">
+                <div class="right-card" data-search="salário mínimo" style="animation: slideUp 0.6s ease-out 0.4s forwards; opacity: 0;">
                     <h3>💰 Salário Mínimo</h3>
                     <p>Todo trabalhador tem direito a receber no mínimo o salário mínimo estabelecido por lei, reajustado anualmente. Ninguém pode receber menos que isso!</p>
                 </div>
-                <div class="right-card" data-search="décimo terceiro 13">
+                <div class="right-card" data-search="décimo terceiro 13" style="animation: slideUp 0.6s ease-out 0.5s forwards; opacity: 0;">
                     <h3>🎁 13º Salário</h3>
                     <p>Toda empresa deve pagar uma gratificação anual ao empregado, equivalente a um salário. É pago em duas parcelas: até 30 de novembro e até 20 de dezembro.</p>
                 </div>
-                <div class="right-card" data-search="férias">
+                <div class="right-card" data-search="férias" style="animation: slideUp 0.6s ease-out 0.6s forwards; opacity: 0;">
                     <h3>🏖️ Férias Remuneradas</h3>
                     <p>Todo trabalhador tem direito a 30 dias de férias remuneradas a cada 12 meses de trabalho. Pode receber abono pecuniário de 1/3 das férias em dinheiro.</p>
                 </div>
-                <div class="right-card" data-search="jornada horário">
+                <div class="right-card" data-search="jornada horário" style="animation: slideUp 0.6s ease-out 0.7s forwards; opacity: 0;">
                     <h3>⏰ Jornada de Trabalho</h3>
                     <p>A jornada não deve exceder 8 horas diárias e 44 horas semanais. Horas extras devem ser remuneradas com adicional de 50%.</p>
                 </div>
-                <div class="right-card" data-search="repouso semanal domingo">
+                <div class="right-card" data-search="repouso semanal domingo" style="animation: slideUp 0.6s ease-out 0.8s forwards; opacity: 0;">
                     <h3>😴 Repouso Semanal</h3>
                     <p>Todo trabalhador tem direito a pelo menos um dia de repouso semanal, preferencialmente aos domingos. Isso é essencial para a saúde e bem-estar!</p>
                 </div>
-                <div class="right-card" data-search="segurança trabalho">
+                <div class="right-card" data-search="segurança trabalho" style="animation: slideUp 0.6s ease-out 0.9s forwards; opacity: 0;">
                     <h3>🦺 Segurança no Trabalho</h3>
                     <p>O empregador é obrigado a fornecer equipamentos de proteção e condições seguras de trabalho para evitar acidentes. Sua saúde é prioridade!</p>
                 </div>
-                <div class="right-card" data-search="fgts fundo garantia">
+                <div class="right-card" data-search="fgts fundo garantia" style="animation: slideUp 0.6s ease-out 1s forwards; opacity: 0;">
                     <h3>🏦 FGTS</h3>
                     <p>Fundo de Garantia do Tempo de Serviço. O empregador deposita 8% do salário em conta para o trabalhador, resgatável em determinadas situações.</p>
                 </div>
-                <div class="right-card" data-search="indenização dispensa">
+                <div class="right-card" data-search="indenização dispensa" style="animation: slideUp 0.6s ease-out 1.1s forwards; opacity: 0;">
                     <h3>💵 Indenização por Dispensa</h3>
                     <p>Em caso de dispensa sem justa causa, o trabalhador recebe indenização compensatória de 40% do saldo do FGTS e avisos prévios.</p>
                 </div>
-                <div class="right-card" data-search="maternidade gestante gravidez">
+                <div class="right-card" data-search="maternidade gestante gravidez" style="animation: slideUp 0.6s ease-out 1.2s forwards; opacity: 0;">
                     <h3>👶 Maternidade</h3>
                     <p>A gestante tem direito a 120 dias de licença maternidade remunerada, sem perder o emprego. É um direito essencial para mãe e filho!</p>
                 </div>
-                <div class="right-card" data-search="paternidade pai">
+                <div class="right-card" data-search="paternidade pai" style="animation: slideUp 0.6s ease-out 1.3s forwards; opacity: 0;">
                     <h3>👨‍👧 Paternidade</h3>
                     <p>O pai tem direito a 5 dias de licença paternidade remunerada após o nascimento do filho. Tempo importante para a família!</p>
                 </div>
-                <div class="right-card" data-search="auxílio doença inss">
+                <div class="right-card" data-search="auxílio doença inss" style="animation: slideUp 0.6s ease-out 1.4s forwards; opacity: 0;">
                     <h3>🏥 Auxílio-Doença</h3>
                     <p>Trabalhador afastado por doença recebe benefício do INSS enquanto estiver incapacitado para o trabalho. Sua saúde vem em primeiro lugar!</p>
                 </div>
-                <div class="right-card" data-search="associação sindicato">
+                <div class="right-card" data-search="associação sindicato" style="animation: slideUp 0.6s ease-out 1.5s forwards; opacity: 0;">
                     <h3>🤝 Liberdade de Associação</h3>
                     <p>Todo trabalhador tem direito de se associar a sindicatos e organizações de classe para defender seus interesses coletivos.</p>
                 </div>
@@ -107,29 +107,29 @@ const pages = {
     deveres: `
         <section class="container section">
             <h2>📋 Deveres do Trabalhador</h2>
-            <p class="intro-text">O trabalhador também tem responsabilidades! Conheça os principais deveres:</p>
+            <p class="intro-text" style="animation: slideDown 0.6s ease-out 0s forwards; opacity: 0;">O trabalhador também tem responsabilidades! Conheça os principais deveres:</p>
             <div class="duties-grid">
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.2s forwards; opacity: 0;">
                     <h3>✔️ Cumprimento das Obrigações</h3>
                     <p>O trabalhador deve cumprir as tarefas e responsabilidades definidas no contrato de trabalho com diligência, eficiência e qualidade. Faça bem o seu trabalho!</p>
                 </div>
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.35s forwards; opacity: 0;">
                     <h3>📏 Respeito às Normas</h3>
                     <p>Deve respeitar as normas e regulamentos da empresa, cumprindo com disciplina e responsabilidade. As regras existem para o bem de todos!</p>
                 </div>
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.5s forwards; opacity: 0;">
                     <h3>🕐 Assiduidade e Pontualidade</h3>
                     <p>O trabalhador deve ser assíduo (frequente) e pontual nos horários estabelecidos pela empresa. Faltas e atrasos prejudicam a empresa e seus colegas.</p>
                 </div>
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.65s forwards; opacity: 0;">
                     <h3>🤐 Sigilo Profissional</h3>
                     <p>Deve manter sigilo sobre informações confidenciais da empresa e de clientes. Não divulgar segredos é essencial para a confiança e a empresa!</p>
                 </div>
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.8s forwards; opacity: 0;">
                     <h3>🛡️ Preservação do Patrimônio</h3>
                     <p>O trabalhador é responsável pela preservação e cuidado com os bens e equipamentos da empresa. Use com responsabilidade o que lhe é confiado!</p>
                 </div>
-                <div class="duty-card">
+                <div class="duty-card" style="animation: slideUp 0.6s ease-out 0.95s forwards; opacity: 0;">
                     <h3>📢 Comunicação de Problemas</h3>
                     <p>Deve comunicar ao empregador qualquer problema ou situação que possa prejudicar o trabalho. A comunicação clara evita maiores problemas!</p>
                 </div>
@@ -140,9 +140,9 @@ const pages = {
     temas: `
         <section class="container section">
             <h2>🎯 Temas Importantes na CLT</h2>
-            <p class="intro-text">Clique nos tópicos abaixo para saber mais detalhes:</p>
+            <p class="intro-text" style="animation: slideDown 0.6s ease-out 0s forwards; opacity: 0;">Clique nos tópicos abaixo para saber mais detalhes:</p>
             <div class="accordion">
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.15s forwards; opacity: 0;">
                     <button class="accordion-button">📝 Contrato de Trabalho</button>
                     <div class="accordion-content">
                         <h4>O que é?</h4>
@@ -151,7 +151,7 @@ const pages = {
                         <p>Deve especificar: funções, salário, jornada, local de trabalho, benefícios, e outras cláusulas importantes. Sempre peça uma cópia para guardar!</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.3s forwards; opacity: 0;">
                     <button class="accordion-button">🚪 Rescisão do Contrato</button>
                     <div class="accordion-content">
                         <h4>Tipos de rescisão:</h4>
@@ -160,14 +160,14 @@ const pages = {
                         <p><strong>Pedido de demissão:</strong> Trabalhador sai voluntariamente - direitos reduzidos.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.45s forwards; opacity: 0;">
                     <button class="accordion-button">⚖️ Justa Causa</button>
                     <div class="accordion-content">
                         <h4>Exemplos de justa causa:</h4>
                         <ul><li>Má conduta grave ou roubo</li><li>Falta disciplinar séria</li><li>Embriaguez no trabalho</li><li>Atos contra segurança</li><li>Desonestidade ou fraude</li></ul>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.6s forwards; opacity: 0;">
                     <button class="accordion-button">⏲️ Aviso Prévio</button>
                     <div class="accordion-content">
                         <h4>O que é?</h4>
@@ -175,7 +175,7 @@ const pages = {
                         <p>Direitos durante o aviso: 2 horas diárias livres para procurar outro emprego.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.75s forwards; opacity: 0;">
                     <button class="accordion-button">⚡ Horas Extras e Noturnas</button>
                     <div class="accordion-content">
                         <h4>Horas Extras:</h4>
@@ -184,21 +184,21 @@ const pages = {
                         <p>Trabalho entre 22h e 5h recebe adicional de 20% (mínimo).</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.9s forwards; opacity: 0;">
                     <button class="accordion-button">🛡️ Estabilidade Provisória</button>
                     <div class="accordion-content">
                         <h4>Quem tem direito:</h4>
                         <ul><li>Gestantes (durante gravidez + 5 meses)</li><li>Dirigentes Sindicais</li><li>Membros de CIPA</li><li>Acidentados</li></ul>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 1.05s forwards; opacity: 0;">
                     <button class="accordion-button">🎁 Benefícios Sociais</button>
                     <div class="accordion-content">
                         <h4>Benefícios obrigatórios:</h4>
                         <ul><li>FGTS (8% do salário)</li><li>13º salário</li><li>Férias (30 dias)</li><li>Vale transporte</li><li>Licenças remuneradas</li></ul>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 1.2s forwards; opacity: 0;">
                     <button class="accordion-button">👶 Trabalho de Menores</button>
                     <div class="accordion-content">
                         <h4>Proibições:</h4>
@@ -215,7 +215,7 @@ const pages = {
             <div class="container">
                 <h2>ℹ️ Informações Essenciais</h2>
                 <div class="info-grid">
-                    <div class="info-box">
+                    <div class="info-box" style="animation: slideUp 0.6s ease-out 0.2s forwards; opacity: 0;">
                         <h4>📖 Artigos Principais</h4>
                         <ul>
                             <li><strong>Art. 5º:</strong> Direitos fundamentais</li>
@@ -226,7 +226,7 @@ const pages = {
                             <li><strong>Art. 120-133:</strong> Férias</li>
                         </ul>
                     </div>
-                    <div class="info-box">
+                    <div class="info-box" style="animation: slideUp 0.6s ease-out 0.35s forwards; opacity: 0;">
                         <h4>🏢 Instituições Responsáveis</h4>
                         <ul>
                             <li>🏛️ <strong>Ministério do Trabalho</strong></li>
@@ -236,7 +236,7 @@ const pages = {
                             <li>🛡️ <strong>MTE/Auditoria Fiscal</strong></li>
                         </ul>
                     </div>
-                    <div class="info-box">
+                    <div class="info-box" style="animation: slideUp 0.6s ease-out 0.5s forwards; opacity: 0;">
                         <h4>📞 Canais de Atendimento</h4>
                         <ul>
                             <li>📞 <strong>Central 188:</strong> Informações</li>
@@ -330,4 +330,4 @@ window.addEventListener('load', () => {
     changePage('inicio');
 });
 
-console.log('🚀 CLT SPA com Animações carregado com sucesso!');
+console.log('🚀 CLT SPA com Animações em TUDO carregado com sucesso!');
