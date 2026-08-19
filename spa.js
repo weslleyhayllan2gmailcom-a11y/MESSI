@@ -210,6 +210,212 @@ const pages = {
         </section>
     `,
 
+    seguranca: `
+        <section class="container section">
+            <h2>🛡️ Segurança do Trabalho</h2>
+            <p class="intro-text" style="animation: slideDown 0.6s ease-out 0s forwards; opacity: 0;">A segurança do trabalho é fundamental para proteger a vida e a saúde dos trabalhadores. Conheça os principais direitos e deveres:</p>
+            
+            <div class="accordion">
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.15s forwards; opacity: 0;">
+                    <button class="accordion-button">⚠️ O que é Segurança do Trabalho?</button>
+                    <div class="accordion-content">
+                        <h4>Definição</h4>
+                        <p>Segurança do Trabalho é o conjunto de medidas adotadas para prevenir acidentes, doenças ocupacionais e proteger a vida dos trabalhadores durante o exercício de suas funções.</p>
+                        <h4>Importância</h4>
+                        <p>Previne acidentes graves, reduz custos com indenizações e afastamentos, melhora a produtividade e garante um ambiente de trabalho mais saudável para todos.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.3s forwards; opacity: 0;">
+                    <button class="accordion-button">👷 Equipamentos de Proteção Individual (EPI)</button>
+                    <div class="accordion-content">
+                        <h4>O que é EPI?</h4>
+                        <p>São dispositivos de uso individual destinados a proteger a saúde e a integridade física do trabalhador. Exemplos: capacete, luvas, óculos de proteção, máscara, colete, botina de segurança.</p>
+                        <h4>Responsabilidades</h4>
+                        <ul>
+                            <li><strong>Empregador:</strong> Fornece, mantém e substitui o EPI gratuitamente</li>
+                            <li><strong>Trabalhador:</strong> Usa corretamente, cuida e mantém em bom estado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.45s forwards; opacity: 0;">
+                    <button class="accordion-button">🔍 Normas de Segurança (NR)</button>
+                    <div class="accordion-content">
+                        <h4>O que são NRs?</h4>
+                        <p>Normas Regulamentadoras são regras do Ministério do Trabalho que estabelecem diretrizes de segurança e saúde no trabalho.</p>
+                        <h4>Principais NRs:</h4>
+                        <ul>
+                            <li><strong>NR 1:</strong> Disposições gerais de segurança</li>
+                            <li><strong>NR 4:</strong> Serviços de Segurança e Medicina do Trabalho</li>
+                            <li><strong>NR 5:</strong> CIPA (Comissão Interna de Prevenção de Acidentes)</li>
+                            <li><strong>NR 6:</strong> Equipamento de Proteção Individual</li>
+                            <li><strong>NR 17:</strong> Ergonomia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.6s forwards; opacity: 0;">
+                    <button class="accordion-button">🏥 Prevenção de Acidentes</button>
+                    <div class="accordion-content">
+                        <h4>Medidas preventivas:</h4>
+                        <ul>
+                            <li>✅ Avaliação de riscos no ambiente de trabalho</li>
+                            <li>✅ Treinamento dos trabalhadores</li>
+                            <li>✅ Sinalização adequada</li>
+                            <li>✅ Manutenção preventiva de máquinas e equipamentos</li>
+                            <li>✅ Uso obrigatório de EPI</li>
+                            <li>✅ Primeiros socorros disponíveis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.75s forwards; opacity: 0;">
+                    <button class="accordion-button">🚨 Acidente de Trabalho</button>
+                    <div class="accordion-content">
+                        <h4>O que é acidente de trabalho?</h4>
+                        <p>É qualquer lesão corporal ou perturbação funcional que o trabalhador sofra durante o trabalho ou em consequência dele.</p>
+                        <h4>Direitos do trabalhador acidentado:</h4>
+                        <ul>
+                            <li>Receber auxílio-doença do INSS</li>
+                            <li>Receber auxílio-acidente se tiver sequelas</li>
+                            <li>Não perder o emprego</li>
+                            <li>Afastamento da função de risco</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 0.9s forwards; opacity: 0;">
+                    <button class="accordion-button">🔬 Doenças Ocupacionais</button>
+                    <div class="accordion-content">
+                        <h4>O que são?</h4>
+                        <p>Doenças causadas pelas condições de trabalho. Exemplos: LER (Lesão por Esforço Repetitivo), dermatite, perda auditiva, problemas respiratórios.</p>
+                        <h4>Prevenção:</h4>
+                        <ul>
+                            <li>Ergonomia adequada no ambiente</li>
+                            <li>Pausas regulares</li>
+                            <li>Rotatividade de funções</li>
+                            <li>Monitoramento da saúde</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 1.05s forwards; opacity: 0;">
+                    <button class="accordion-button">👥 CIPA - Comissão Interna de Prevenção</button>
+                    <div class="accordion-content">
+                        <h4>O que é CIPA?</h4>
+                        <p>Comissão formada por representantes dos trabalhadores e da empresa para identificar riscos e promover ações de segurança.</p>
+                        <h4>Funções:</h4>
+                        <ul>
+                            <li>Investigar acidentes</li>
+                            <li>Fazer inspeções na empresa</li>
+                            <li>Promover treinamentos</li>
+                            <li>Comunicar riscos ao empregador</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="animation: slideUp 0.6s ease-out 1.2s forwards; opacity: 0;">
+                    <button class="accordion-button">⚖️ Direitos e Deveres</button>
+                    <div class="accordion-content">
+                        <h4>Direitos do Trabalhador:</h4>
+                        <ul>
+                            <li>✅ Trabalhar em ambiente seguro</li>
+                            <li>✅ Receber EPI gratuitamente</li>
+                            <li>✅ Ser informado sobre riscos</li>
+                            <li>✅ Recusar trabalho perigoso</li>
+                            <li>✅ Participar de treinamentos</li>
+                        </ul>
+                        <h4>Deveres do Trabalhador:</h4>
+                        <ul>
+                            <li>✅ Usar EPI corretamente</li>
+                            <li>✅ Cumprir as normas de segurança</li>
+                            <li>✅ Comunicar riscos e acidentes</li>
+                            <li>✅ Participar de treinamentos</li>
+                            <li>✅ Colaborar com a CIPA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `,
+
+    creditos: `
+        <section class="container section">
+            <h2>👥 Créditos - Trabalho do Grupo</h2>
+            <p class="intro-text" style="animation: slideDown 0.6s ease-out 0s forwards; opacity: 0;">Projeto desenvolvido pelos alunos como trabalho sobre Segurança do Trabalho</p>
+            
+            <div class="credits-box" style="animation: slideUp 0.6s ease-out 0.2s forwards; opacity: 0;">
+                <h3>📚 Instituição de Ensino</h3>
+                <div class="credit-info">
+                    <p><strong>Escola:</strong> Escola Estadual de Educação Profissional</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">*(Insira o nome da sua escola aqui)*</p>
+                </div>
+            </div>
+
+            <div class="credits-grid" style="margin-top: 2rem;">
+                <div class="member-card" style="animation: slideUp 0.6s ease-out 0.3s forwards; opacity: 0;">
+                    <div class="member-avatar">👤</div>
+                    <h3>Weslley</h3>
+                    <p class="member-role">Desenvolvedor Web & Design</p>
+                    <p class="member-desc">Responsável pela programação e interface do site</p>
+                </div>
+
+                <div class="member-card" style="animation: slideUp 0.6s ease-out 0.45s forwards; opacity: 0;">
+                    <div class="member-avatar">👤</div>
+                    <h3>Igão</h3>
+                    <p class="member-role">Pesquisador & Conteúdo</p>
+                    <p class="member-desc">Responsável pela coleta e organização das informações</p>
+                </div>
+
+                <div class="member-card" style="animation: slideUp 0.6s ease-out 0.6s forwards; opacity: 0;">
+                    <div class="member-avatar">👤</div>
+                    <h3>Alisson</h3>
+                    <p class="member-role">Pesquisador & Redação</p>
+                    <p class="member-desc">Responsável pela redação e revisão do conteúdo</p>
+                </div>
+
+                <div class="member-card" style="animation: slideUp 0.6s ease-out 0.75s forwards; opacity: 0;">
+                    <div class="member-avatar">👤</div>
+                    <h3>Levi</h3>
+                    <p class="member-role">Pesquisador & Validação</p>
+                    <p class="member-desc">Responsável pela validação das informações legais</p>
+                </div>
+            </div>
+
+            <div class="project-info" style="animation: slideUp 0.6s ease-out 0.9s forwards; opacity: 0;">
+                <h3>📋 Sobre Este Projeto</h3>
+                <div class="info-content">
+                    <p><strong>Objetivo:</strong> Criar um website educativo sobre a Consolidação das Leis do Trabalho (CLT) com foco especial em <strong>Segurança do Trabalho</strong>.</p>
+                    <p><strong>Tema:</strong> Segurança, Saúde e Proteção do Trabalhador</p>
+                    <p><strong>Disciplina:</strong> Trabalho Integrado</p>
+                    <p><strong>Tecnologias Utilizadas:</strong></p>
+                    <ul>
+                        <li>HTML5 para estrutura</li>
+                        <li>CSS3 para estilo e animações</li>
+                        <li>JavaScript para interatividade</li>
+                        <li>SPA (Single Page Application) para navegação fluida</li>
+                    </ul>
+                    <p><strong>Data de Conclusão:</strong> 2024</p>
+                </div>
+            </div>
+
+            <div class="features-box" style="animation: slideUp 0.6s ease-out 1.05s forwards; opacity: 0;">
+                <h3>✨ Funcionalidades do Site</h3>
+                <div class="features-list">
+                    <div class="feature-item">✅ 8 Páginas com conteúdo completo</div>
+                    <div class="feature-item">✅ Animações suaves em todos os elementos</div>
+                    <div class="feature-item">✅ Sistema de busca nos direitos</div>
+                    <div class="feature-item">✅ Acordeom interativo para temas</div>
+                    <div class="feature-item">✅ Design responsivo (mobile & desktop)</div>
+                    <div class="feature-item">✅ Conteúdo sobre Segurança do Trabalho</div>
+                    <div class="feature-item">✅ Navegação sem recarregar página (SPA)</div>
+                    <div class="feature-item">✅ Interface moderna e atrativa</div>
+                </div>
+            </div>
+        </section>
+    `,
+
     info: `
         <section class="info-section">
             <div class="container">
@@ -222,8 +428,7 @@ const pages = {
                             <li><strong>Art. 7º:</strong> Direitos dos trabalhadores</li>
                             <li><strong>Art. 47-52:</strong> Contrato individual</li>
                             <li><strong>Art. 482-491:</strong> Rescisão do contrato</li>
-                            <li><strong>Art. 58-65:</strong> Jornada de trabalho</li>
-                            <li><strong>Art. 120-133:</strong> Férias</li>
+                            <li><strong>Art. 154-159:</strong> Segurança e Medicina</li>
                         </ul>
                     </div>
                     <div class="info-box" style="animation: slideUp 0.6s ease-out 0.35s forwards; opacity: 0;">
@@ -274,7 +479,7 @@ function changePage(page) {
             
             // Reinicializar funcionalidades
             setTimeout(() => {
-                if (page === 'temas') {
+                if (page === 'temas' || page === 'seguranca') {
                     initAccordion();
                 } else if (page === 'direitos') {
                     initSearch();
@@ -330,4 +535,4 @@ window.addEventListener('load', () => {
     changePage('inicio');
 });
 
-console.log('🚀 CLT SPA com Animações em TUDO carregado com sucesso!');
+console.log('🚀 CLT SPA com Segurança e Créditos carregado com sucesso!');
