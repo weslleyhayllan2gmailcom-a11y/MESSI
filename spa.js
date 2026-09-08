@@ -3,28 +3,43 @@ const pages = {
     inicio: `
         <header class="hero">
             <div class="hero-content">
-                <h1>CLT - Consolidação das Leis do Trabalho</h1>
+                <h1>⚖️ CLT - Consolidação das Leis do Trabalho</h1>
                 <p>Conheça todos os seus direitos e deveres como trabalhador</p>
-                <button class="cta-button" onclick="changePage('historia')">Saiba Mais</button>
+                <div class="hero-buttons">
+                    <button class="cta-button" onclick="changePage('direitos')">Conhecer Direitos</button>
+                    <button class="cta-button secondary" onclick="changePage('deveres')">Entender Deveres</button>
+                </div>
             </div>
         </header>
     `,
 
     historia: `
         <section class="container section">
-            <h2>História da CLT</h2>
+            <h2>📚 História da CLT</h2>
             <div class="content-grid">
                 <div class="card">
-                    <h3>Origem</h3>
+                    <h3>🌍 Origem</h3>
                     <p>A CLT foi promulgada em 1º de maio de 1943 pelo presidente Getúlio Vargas. Foi consolidação de leis trabalhistas anteriores e representou um marco importante na proteção dos direitos dos trabalhadores brasileiros.</p>
                 </div>
                 <div class="card">
-                    <h3>Objetivo</h3>
+                    <h3>🎯 Objetivo</h3>
                     <p>Reunir e organizar todas as leis referentes ao trabalho em um único documento, garantindo proteção aos trabalhadores e estabelecendo diretrizes para as relações entre empregadores e empregados.</p>
                 </div>
                 <div class="card">
-                    <h3>Importância</h3>
-                    <p>A CLT é a base da legislação trabalhista brasileira, protegendo os direitos fundamentais dos trabalhadores e estabelecendo as obrigações dos empregadores.</p>
+                    <h3>⭐ Importância</h3>
+                    <p>A CLT é a base da legislação trabalhista brasileira, protegendo os direitos fundamentais dos trabalhadores e estabelecendo as obrigações dos empregadores. Ela continua sendo fundamental nos dias atuais.</p>
+                </div>
+                <div class="card">
+                    <h3>📅 Evolução</h3>
+                    <p>Desde 1943, a CLT sofreu diversas modificações. A mais recente e importante foi a Lei da Reforma Trabalhista (Lei 13.467/2017), que modernizou vários aspectos das relações trabalhistas.</p>
+                </div>
+                <div class="card">
+                    <h3>🇧🇷 Brasil e CLT</h3>
+                    <p>A CLT é específica para o Brasil. Outros países têm suas próprias legislações trabalhistas. O Brasil é reconhecido internacionalmente por ter uma das legislações trabalhistas mais completas.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Atualidade</h3>
+                    <p>A CLT continua sendo o documento mais importante para trabalhadores. Com o surgimento de novas formas de trabalho (home office, freelance), a lei continua se adaptando para proteger todos.</p>
                 </div>
             </div>
         </section>
@@ -32,55 +47,58 @@ const pages = {
 
     direitos: `
         <section class="container section">
-            <h2>Direitos do Trabalhador</h2>
+            <h2>✅ Direitos do Trabalhador</h2>
+            <div class="search-box">
+                <input type="text" id="searchDireitos" placeholder="🔍 Buscar direito..." onkeyup="filterCards('direitos')">
+            </div>
             <div class="rights-grid">
-                <div class="right-card">
-                    <h3>Salário Mínimo</h3>
-                    <p>Todo trabalhador tem direito a receber no mínimo o salário mínimo estabelecido por lei, reajustado anualmente.</p>
+                <div class="right-card" data-search="salário mínimo">
+                    <h3>💰 Salário Mínimo</h3>
+                    <p>Todo trabalhador tem direito a receber no mínimo o salário mínimo estabelecido por lei, reajustado anualmente. Ninguém pode receber menos que isso!</p>
                 </div>
-                <div class="right-card">
-                    <h3>13º Salário</h3>
+                <div class="right-card" data-search="décimo terceiro 13">
+                    <h3>🎁 13º Salário</h3>
                     <p>Toda empresa deve pagar uma gratificação anual ao empregado, equivalente a um salário. É pago em duas parcelas: até 30 de novembro e até 20 de dezembro.</p>
                 </div>
-                <div class="right-card">
-                    <h3>Férias Remuneradas</h3>
-                    <p>Todo trabalhador tem direito a 30 dias de férias remuneradas a cada 12 meses de trabalho. Pode receber abono pecuniário de 1/3 das férias.</p>
+                <div class="right-card" data-search="férias">
+                    <h3>🏖️ Férias Remuneradas</h3>
+                    <p>Todo trabalhador tem direito a 30 dias de férias remuneradas a cada 12 meses de trabalho. Pode receber abono pecuniário de 1/3 das férias em dinheiro.</p>
                 </div>
-                <div class="right-card">
-                    <h3>Jornada de Trabalho</h3>
-                    <p>A jornada não deve exceder 8 horas diárias e 44 horas semanais. Horas extras devem ser remuneradas com adicional.</p>
+                <div class="right-card" data-search="jornada horário">
+                    <h3>⏰ Jornada de Trabalho</h3>
+                    <p>A jornada não deve exceder 8 horas diárias e 44 horas semanais. Horas extras devem ser remuneradas com adicional de 50%.</p>
                 </div>
-                <div class="right-card">
-                    <h3>Repouso Semanal</h3>
-                    <p>Todo trabalhador tem direito a pelo menos um dia de repouso semanal, preferencialmente aos domingos.</p>
+                <div class="right-card" data-search="repouso semanal domingo">
+                    <h3>😴 Repouso Semanal</h3>
+                    <p>Todo trabalhador tem direito a pelo menos um dia de repouso semanal, preferencialmente aos domingos. Isso é essencial para a saúde e bem-estar!</p>
                 </div>
-                <div class="right-card">
-                    <h3>Segurança no Trabalho</h3>
-                    <p>O empregador é obrigado a fornecer equipamentos de proteção e condições seguras de trabalho para evitar acidentes.</p>
+                <div class="right-card" data-search="segurança trabalho">
+                    <h3>🦺 Segurança no Trabalho</h3>
+                    <p>O empregador é obrigado a fornecer equipamentos de proteção e condições seguras de trabalho para evitar acidentes. Sua saúde é prioridade!</p>
                 </div>
-                <div class="right-card">
-                    <h3>FGTS</h3>
+                <div class="right-card" data-search="fgts fundo garantia">
+                    <h3>🏦 FGTS</h3>
                     <p>Fundo de Garantia do Tempo de Serviço. O empregador deposita 8% do salário em conta para o trabalhador, resgatável em determinadas situações.</p>
                 </div>
-                <div class="right-card">
-                    <h3>Indenização por Dispensa</h3>
+                <div class="right-card" data-search="indenização dispensa">
+                    <h3>💵 Indenização por Dispensa</h3>
                     <p>Em caso de dispensa sem justa causa, o trabalhador recebe indenização compensatória de 40% do saldo do FGTS e avisos prévios.</p>
                 </div>
-                <div class="right-card">
-                    <h3>Maternidade</h3>
-                    <p>A gestante tem direito a 120 dias de licença maternidade remunerada, sem perder o emprego.</p>
+                <div class="right-card" data-search="maternidade gestante gravidez">
+                    <h3>👶 Maternidade</h3>
+                    <p>A gestante tem direito a 120 dias de licença maternidade remunerada, sem perder o emprego. É um direito essencial para mãe e filho!</p>
                 </div>
-                <div class="right-card">
-                    <h3>Paternidade</h3>
-                    <p>O pai tem direito a 5 dias de licença paternidade remunerada após o nascimento do filho.</p>
+                <div class="right-card" data-search="paternidade pai">
+                    <h3>👨‍👧 Paternidade</h3>
+                    <p>O pai tem direito a 5 dias de licença paternidade remunerada após o nascimento do filho. Tempo importante para a família!</p>
                 </div>
-                <div class="right-card">
-                    <h3>Auxílio-Doença</h3>
-                    <p>Trabalhador afastado por doença recebe benefício do INSS enquanto estiver incapacitado para o trabalho.</p>
+                <div class="right-card" data-search="auxílio doença inss">
+                    <h3>🏥 Auxílio-Doença</h3>
+                    <p>Trabalhador afastado por doença recebe benefício do INSS enquanto estiver incapacitado para o trabalho. Sua saúde vem em primeiro lugar!</p>
                 </div>
-                <div class="right-card">
-                    <h3>Liberdade de Associação</h3>
-                    <p>Todo trabalhador tem direito de se associar a sindicatos e organizações de classe para defender seus interesses.</p>
+                <div class="right-card" data-search="associação sindicato">
+                    <h3>🤝 Liberdade de Associação</h3>
+                    <p>Todo trabalhador tem direito de se associar a sindicatos e organizações de classe para defender seus interesses coletivos.</p>
                 </div>
             </div>
         </section>
@@ -88,31 +106,32 @@ const pages = {
 
     deveres: `
         <section class="container section">
-            <h2>Deveres do Trabalhador</h2>
+            <h2>📋 Deveres do Trabalhador</h2>
+            <p class="intro-text">O trabalhador também tem responsabilidades! Conheça os principais deveres:</p>
             <div class="duties-grid">
                 <div class="duty-card">
-                    <h3>Cumprimento das Obrigações</h3>
-                    <p>O trabalhador deve cumprir as tarefas e responsabilidades definidas no contrato de trabalho com diligência e eficiência.</p>
+                    <h3>✔️ Cumprimento das Obrigações</h3>
+                    <p>O trabalhador deve cumprir as tarefas e responsabilidades definidas no contrato de trabalho com diligência, eficiência e qualidade. Faça bem o seu trabalho!</p>
                 </div>
                 <div class="duty-card">
-                    <h3>Respeito às Normas</h3>
-                    <p>Deve respeitar as normas e regulamentos da empresa, cumprindo com disciplina e responsabilidade.</p>
+                    <h3>📏 Respeito às Normas</h3>
+                    <p>Deve respeitar as normas e regulamentos da empresa, cumprindo com disciplina e responsabilidade. As regras existem para o bem de todos!</p>
                 </div>
                 <div class="duty-card">
-                    <h3>Assiduidade e Pontualidade</h3>
-                    <p>O trabalhador deve ser assíduo e pontual nos horários estabelecidos pela empresa.</p>
+                    <h3>🕐 Assiduidade e Pontualidade</h3>
+                    <p>O trabalhador deve ser assíduo (frequente) e pontual nos horários estabelecidos pela empresa. Faltas e atrasos prejudicam a empresa e seus colegas.</p>
                 </div>
                 <div class="duty-card">
-                    <h3>Sigilo Profissional</h3>
-                    <p>Deve manter sigilo sobre informações confidenciais da empresa e de clientes.</p>
+                    <h3>🤐 Sigilo Profissional</h3>
+                    <p>Deve manter sigilo sobre informações confidenciais da empresa e de clientes. Não divulgar segredos é essencial para a confiança e a empresa!</p>
                 </div>
                 <div class="duty-card">
-                    <h3>Preservação do Patrimônio</h3>
-                    <p>O trabalhador é responsável pela preservação e cuidado com os bens e equipamentos da empresa.</p>
+                    <h3>🛡️ Preservação do Patrimônio</h3>
+                    <p>O trabalhador é responsável pela preservação e cuidado com os bens e equipamentos da empresa. Use com responsabilidade o que lhe é confiado!</p>
                 </div>
                 <div class="duty-card">
-                    <h3>Comunicação de Problemas</h3>
-                    <p>Deve comunicar ao empregador qualquer problema ou situação que possa prejudicar o trabalho.</p>
+                    <h3>📢 Comunicação de Problemas</h3>
+                    <p>Deve comunicar ao empregador qualquer problema ou situação que possa prejudicar o trabalho. A comunicação clara evita maiores problemas!</p>
                 </div>
             </div>
         </section>
@@ -120,54 +139,71 @@ const pages = {
 
     temas: `
         <section class="container section">
-            <h2>Temas Importantes na CLT</h2>
+            <h2>🎯 Temas Importantes na CLT</h2>
+            <p class="intro-text">Clique nos tópicos abaixo para saber mais detalhes:</p>
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-button">Contrato de Trabalho</button>
+                    <button class="accordion-button">📝 Contrato de Trabalho</button>
                     <div class="accordion-content">
-                        <p>O contrato de trabalho é o acordo entre empregador e empregado. Pode ser por prazo indeterminado (contínuo) ou determinado (temporário, de safra ou por obra certa). O contrato deve conter informações sobre função, salário, horário e benefícios.</p>
+                        <h4>O que é?</h4>
+                        <p>O contrato de trabalho é o acordo entre empregador e empregado. Pode ser por prazo indeterminado (contínuo) ou determinado (temporário, de safra ou por obra certa).</p>
+                        <h4>O que deve conter?</h4>
+                        <p>Deve especificar: funções, salário, jornada, local de trabalho, benefícios, e outras cláusulas importantes. Sempre peça uma cópia para guardar!</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Rescisão do Contrato</button>
+                    <button class="accordion-button">🚪 Rescisão do Contrato</button>
                     <div class="accordion-content">
-                        <p>A rescisão pode ser por demissão sem justa causa (com direitos indenizatórios), demissão por justa causa (sem direitos adicionais), pedido de demissão pelo trabalhador ou término de contrato por prazo determinado.</p>
+                        <h4>Tipos de rescisão:</h4>
+                        <p><strong>Demissão sem justa causa:</strong> O empregador dispensa sem motivo - trabalhador recebe direitos.</p>
+                        <p><strong>Demissão por justa causa:</strong> Por falta grave - sem direitos adicionais.</p>
+                        <p><strong>Pedido de demissão:</strong> Trabalhador sai voluntariamente - direitos reduzidos.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Justa Causa</button>
+                    <button class="accordion-button">⚖️ Justa Causa</button>
                     <div class="accordion-content">
-                        <p>Motivos legítimos para demitir sem indenização: má conduta grave, falta disciplinar séria, embriaguez no trabalho, atos contra segurança, desonestidade e abandono de emprego.</p>
+                        <h4>Exemplos de justa causa:</h4>
+                        <ul><li>Má conduta grave ou roubo</li><li>Falta disciplinar séria</li><li>Embriaguez no trabalho</li><li>Atos contra segurança</li><li>Desonestidade ou fraude</li></ul>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Aviso Prévio</button>
+                    <button class="accordion-button">⏲️ Aviso Prévio</button>
                     <div class="accordion-content">
-                        <p>Comunicação formal com antecedência de 30 dias sobre o término do contrato. Pode ser trabalhado ou indenizado. O trabalhador tem direito a 2 horas diárias livres durante o período de aviso prévio.</p>
+                        <h4>O que é?</h4>
+                        <p>Comunicação formal com 30 dias de antecedência sobre o término do contrato de trabalho.</p>
+                        <p>Direitos durante o aviso: 2 horas diárias livres para procurar outro emprego.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Horas Extras e Noturnas</button>
+                    <button class="accordion-button">⚡ Horas Extras e Noturnas</button>
                     <div class="accordion-content">
-                        <p>Horas extras são remuneradas com adicional de 50%. Trabalho noturno (22h às 5h) recebe adicional de 20%. Horas extras noturnas recebem ambos os adicionais.</p>
+                        <h4>Horas Extras:</h4>
+                        <p>Remuneradas com adicional de 50% (mínimo).</p>
+                        <h4>Horário Noturno:</h4>
+                        <p>Trabalho entre 22h e 5h recebe adicional de 20% (mínimo).</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Estabilidade Provisória</button>
+                    <button class="accordion-button">🛡️ Estabilidade Provisória</button>
                     <div class="accordion-content">
-                        <p>Alguns trabalhadores têm direito a estabilidade: gestantes, dirigentes sindicais, membros de CIPA e acidentados. Durante este período, não podem ser demitidos sem justa causa.</p>
+                        <h4>Quem tem direito:</h4>
+                        <ul><li>Gestantes (durante gravidez + 5 meses)</li><li>Dirigentes Sindicais</li><li>Membros de CIPA</li><li>Acidentados</li></ul>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Benefícios Sociais</button>
+                    <button class="accordion-button">🎁 Benefícios Sociais</button>
                     <div class="accordion-content">
-                        <p>Além do salário, o trabalhador recebe FGTS, décimo terceiro, férias, licenças remuneradas e acesso a programas de bem-estar oferecidos pela empresa.</p>
+                        <h4>Benefícios obrigatórios:</h4>
+                        <ul><li>FGTS (8% do salário)</li><li>13º salário</li><li>Férias (30 dias)</li><li>Vale transporte</li><li>Licenças remuneradas</li></ul>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Trabalho de Menores</button>
+                    <button class="accordion-button">👶 Trabalho de Menores</button>
                     <div class="accordion-content">
-                        <p>Menores de 18 anos não podem trabalhar à noite, em trabalhos perigosos ou insalubres. Menores de 16 anos só podem trabalhar como aprendiz, com proteção especial.</p>
+                        <h4>Proibições:</h4>
+                        <p><strong>Menores de 18:</strong> Não podem trabalhar à noite ou em trabalhos perigosos.</p>
+                        <p><strong>Menores de 16:</strong> Só como aprendiz, com proteção especial.</p>
                     </div>
                 </div>
             </div>
@@ -177,69 +213,166 @@ const pages = {
     info: `
         <section class="info-section">
             <div class="container">
-                <h2>Informações Essenciais</h2>
+                <h2>ℹ️ Informações Essenciais</h2>
                 <div class="info-grid">
                     <div class="info-box">
-                        <h4>Artigos Principais</h4>
+                        <h4>📖 Artigos Principais</h4>
                         <ul>
-                            <li>Art. 5º - Direitos fundamentais</li>
-                            <li>Art. 7º - Direitos dos trabalhadores</li>
-                            <li>Art. 47 a 52 - Contrato individual</li>
-                            <li>Art. 482 a 491 - Rescisão do contrato</li>
+                            <li><strong>Art. 5º:</strong> Direitos fundamentais</li>
+                            <li><strong>Art. 7º:</strong> Direitos dos trabalhadores</li>
+                            <li><strong>Art. 47-52:</strong> Contrato individual</li>
+                            <li><strong>Art. 482-491:</strong> Rescisão do contrato</li>
+                            <li><strong>Art. 58-65:</strong> Jornada de trabalho</li>
+                            <li><strong>Art. 120-133:</strong> Férias</li>
                         </ul>
                     </div>
                     <div class="info-box">
-                        <h4>Instituições Responsáveis</h4>
+                        <h4>🏢 Instituições Responsáveis</h4>
                         <ul>
-                            <li>Ministério do Trabalho</li>
-                            <li>Sindicatos</li>
-                            <li>Justiça do Trabalho</li>
-                            <li>INSS</li>
+                            <li>🏛️ <strong>Ministério do Trabalho</strong></li>
+                            <li>🤝 <strong>Sindicatos</strong></li>
+                            <li>⚖️ <strong>Justiça do Trabalho</strong></li>
+                            <li>🏥 <strong>INSS</strong></li>
+                            <li>🛡️ <strong>MTE/Auditoria Fiscal</strong></li>
                         </ul>
                     </div>
                     <div class="info-box">
-                        <h4>Reclamações e Denúncias</h4>
+                        <h4>📞 Canais de Atendimento</h4>
                         <ul>
-                            <li>Reclamação trabalhista na Justiça</li>
-                            <li>Auditoria Fiscal do Trabalho</li>
-                            <li>Sindicatos</li>
-                            <li>Central de Atendimento (188)</li>
+                            <li>📞 <strong>Central 188:</strong> Informações</li>
+                            <li>⚖️ <strong>Justiça do Trabalho:</strong> Ações judiciais</li>
+                            <li>🤝 <strong>Sindicatos:</strong> Orientação</li>
+                            <li>👨‍⚖️ <strong>Advogado:</strong> Consultoria</li>
+                            <li>📍 <strong>Delegacia Regional:</strong> Auditoria</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+    `,
+
+    seguranca: `
+        <section class="container section">
+            <h2>🔒 Segurança e Privacidade</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🛡️ Proteção de Dados</h3>
+                    <p>Este site não coleta dados pessoais. Todas as informações que você vê são públicas e educacionais sobre a CLT. Nenhum rastreamento é realizado.</p>
+                </div>
+                <div class="card">
+                    <h3>🔐 Segurança do Navegador</h3>
+                    <p>Use sempre conexões seguras (HTTPS). Navegadores modernos protegem sua conexão. Não compartilhe informações sensíveis em sites públicos.</p>
+                </div>
+                <div class="card">
+                    <h3>📋 Política de Privacidade</h3>
+                    <p>Respeitamos sua privacidade. O site funciona totalmente no seu navegador. Nenhuma informação é enviada para servidores externos sem sua autorização.</p>
+                </div>
+                <div class="card">
+                    <h3>⚠️ Aviso Legal</h3>
+                    <p>As informações aqui são educacionais. Para questões legais específicas, consulte um advogado. A CLT é dinâmica e sofre atualizações frequentes.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Atualizações</h3>
+                    <p>Este site é mantido com informações atualizadas sobre a CLT. Consulte sempre fontes oficiais do Ministério do Trabalho para informações críticas.</p>
+                </div>
+                <div class="card">
+                    <h3>💬 Feedback</h3>
+                    <p>Suas sugestões e feedback são importantes para melhorar este projeto. Ajude-nos a manter este recurso educacional útil e preciso.</p>
+                </div>
+            </div>
+        </section>
+    `,
+
+    creditos: `
+        <section class="container section">
+            <h2>🎓 Créditos e Recursos</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>📚 Fontes de Informação</h3>
+                    <p>Este projeto utiliza informações do texto oficial da CLT (Consolidação das Leis do Trabalho), publicado pelo Ministério da Economia e regulamentações atualizadas até 2024.</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍💻 Desenvolvimento</h3>
+                    <p>Site desenvolvido como projeto educacional sobre legislação trabalhista brasileira. Utiliza tecnologias web modernas (HTML5, CSS3, JavaScript vanilla).</p>
+                </div>
+                <div class="card">
+                    <h3>🎨 Design</h3>
+                    <p>Interface amigável e responsiva, otimizada para desktop e dispositivos móveis. Cores escolhidas seguindo padrões de acessibilidade e usabilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>📱 Tecnologias</h3>
+                    <p><strong>Frontend:</strong> HTML5, CSS3 (com gradientes e animações), JavaScript vanilla (sem dependências externas).</p>
+                </div>
+                <div class="card">
+                    <h3>♿ Acessibilidade</h3>
+                    <p>Projeto desenvolvido seguindo princípios WCAG de acessibilidade. Suporta navegação por teclado, leitura de tela e contraste adequado.</p>
+                </div>
+                <div class="card">
+                    <h3>📄 Licença</h3>
+                    <p>Este projeto é de código aberto e educacional. Use, compartilhe e contribua livremente, sempre respeitando a legislação e dando crédito quando apropriado.</p>
+                </div>
+            </div>
+            <div style="margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 10px; text-align: center;">
+                <h4>Desenvolvido com ❤️ para educação laboral</h4>
+                <p style="margin-top: 10px; color: #666;">Este projeto visa democratizar o conhecimento sobre direitos e deveres trabalhistas no Brasil.</p>
+            </div>
+        </section>
     `
 };
 
-// Página atual
 let currentPage = 'inicio';
 
-// Função para mudar de página
 function changePage(page) {
     if (pages[page]) {
-        currentPage = page;
         const app = document.getElementById('app');
-        app.innerHTML = pages[page];
         
-        // Scroll suave para o topo
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Animação de saída
+        app.style.animation = 'pageOut 0.4s ease-out forwards';
         
-        // Reinicializar funcionalidades
-        if (page === 'temas') {
-            initAccordion();
-        }
-        
-        // Adicionar animação de entrada
-        app.style.opacity = '0';
+        // Aguardar animação de saída terminar
         setTimeout(() => {
-            app.style.transition = 'opacity 0.3s ease';
-            app.style.opacity = '1';
-        }, 10);
+            currentPage = page;
+            app.innerHTML = pages[page];
+            
+            // Animação de entrada
+            app.style.animation = 'pageIn 0.5s ease-out forwards';
+            
+            // Scroll suave para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Reinicializar funcionalidades
+            setTimeout(() => {
+                if (page === 'temas') {
+                    initAccordion();
+                } else if (page === 'direitos') {
+                    initSearch();
+                }
+            }, 100);
+        }, 400);
     }
 }
 
-// Inicializar accordion
+function filterCards(page) {
+    const searchInput = document.getElementById(`search${page.charAt(0).toUpperCase() + page.slice(1)}`).value.toLowerCase();
+    const cards = document.querySelectorAll('[data-search]');
+    
+    cards.forEach(card => {
+        const searchText = card.getAttribute('data-search').toLowerCase();
+        if (searchText.includes(searchInput) || searchInput === '') {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function initSearch() {
+    const searchInput = document.getElementById('searchDireitos');
+    if (searchInput) {
+        searchInput.focus();
+    }
+}
+
 function initAccordion() {
     const accordionButtons = document.querySelectorAll('.accordion-button');
     
@@ -248,13 +381,11 @@ function initAccordion() {
             const content = this.nextElementSibling;
             const isActive = this.classList.contains('active');
             
-            // Fechar todos os outros
             accordionButtons.forEach(btn => {
                 btn.classList.remove('active');
                 btn.nextElementSibling.classList.remove('show');
             });
             
-            // Abrir o atual
             if (!isActive) {
                 this.classList.add('active');
                 content.classList.add('show');
@@ -263,39 +394,8 @@ function initAccordion() {
     });
 }
 
-// Carregar página inicial
 window.addEventListener('load', () => {
     changePage('inicio');
-    
-    // Animar elementos ao entrar na viewport
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observar cards quando a página mudar
-    setTimeout(() => {
-        document.querySelectorAll('.card, .right-card, .duty-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    }, 100);
 });
 
-// Suporte a botão de voltar do navegador
-window.addEventListener('popstate', () => {
-    changePage(currentPage);
-});
-
-console.log('🚀 CLT SPA loaded successfully!');
+console.log('🚀 CLT SPA com Animações carregado com sucesso!');
