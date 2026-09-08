@@ -288,20 +288,23 @@ const pages = {
             <h2>🎓 Créditos e Recursos</h2>
             <div class="content-grid">
                 <div class="card">
+                    <h3>👨‍💻 Equipe de Desenvolvimento</h3>
+                    <p><strong>Desenvolvedores do Projeto:</strong></p>
+                    <ul style="text-align: left; display: inline-block;">
+                        <li>✅ Weslley Hayllan</li>
+                        <li>✅ Anderson Levi</li>
+                        <li>✅ Igor Vinicius</li>
+                        <li>✅ Cicero Romão</li>
+                        <li>✅ Alisson Claiuson</li>
+                    </ul>
+                </div>
+                <div class="card">
                     <h3>📚 Fontes de Informação</h3>
                     <p>Este projeto utiliza informações do texto oficial da CLT (Consolidação das Leis do Trabalho), publicado pelo Ministério da Economia e regulamentações atualizadas até 2024.</p>
                 </div>
                 <div class="card">
-                    <h3>👨‍💻 Desenvolvimento</h3>
-                    <p>Site desenvolvido como projeto educacional sobre legislação trabalhista brasileira. Utiliza tecnologias web modernas (HTML5, CSS3, JavaScript vanilla).</p>
-                </div>
-                <div class="card">
-                    <h3>🎨 Design</h3>
-                    <p>Interface amigável e responsiva, otimizada para desktop e dispositivos móveis. Cores escolhidas seguindo padrões de acessibilidade e usabilidade.</p>
-                </div>
-                <div class="card">
-                    <h3>📱 Tecnologias</h3>
-                    <p><strong>Frontend:</strong> HTML5, CSS3 (com gradientes e animações), JavaScript vanilla (sem dependências externas).</p>
+                    <h3>🎨 Design e Tecnologia</h3>
+                    <p>Interface amigável e responsiva, otimizada para desktop e dispositivos móveis. Desenvolvido com HTML5, CSS3 e JavaScript vanilla (sem dependências externas).</p>
                 </div>
                 <div class="card">
                     <h3>♿ Acessibilidade</h3>
@@ -311,10 +314,15 @@ const pages = {
                     <h3>📄 Licença</h3>
                     <p>Este projeto é de código aberto e educacional. Use, compartilhe e contribua livremente, sempre respeitando a legislação e dando crédito quando apropriado.</p>
                 </div>
+                <div class="card">
+                    <h3>🚀 Versão</h3>
+                    <p><strong>Versão 1.0</strong> - Lançada em 2024<br>Site educacional completo sobre direitos e deveres trabalhistas no Brasil.</p>
+                </div>
             </div>
             <div style="margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 10px; text-align: center;">
                 <h4>Desenvolvido com ❤️ para educação laboral</h4>
-                <p style="margin-top: 10px; color: #666;">Este projeto visa democratizar o conhecimento sobre direitos e deveres trabalhistas no Brasil.</p>
+                <p style="margin-top: 10px; color: #666;">Projeto educacional dedicado a democratizar o conhecimento sobre direitos e deveres trabalhistas no Brasil.</p>
+                <p style="margin-top: 15px; font-weight: bold;">Equipe: Weslley Hayllan, Anderson Levi, Igor Vinicius, Cicero Romão e Alisson Claiuson</p>
             </div>
         </section>
     `
